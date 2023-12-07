@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form action="#" method="post">
+        <div>
+            <label for="departamento">Departamento</label>
+            <select name="departamento" id="departamento">
+                <option value="san-miguel">San Miguel</option>
+                <option value="la-union">La Unión</option>
+                <option value="morazan">Morazán</option>
+                <option value="usulutan">Usulután</option>
+            </select>
+        </div>
+        <div>
+            <label for="genero">Género</label>
+            <select name="genero" id="genero">
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+            </select>
+        </div>
+        <div>
+            <label for="educacion">Educación</label>
+            <select name="educacion" id="educacion">
+                <option value="bachiller">Bachiller</option>
+                <option value="pregrado">Pregrado</option>
+                <option value="postgrado">Postgrado</option>
+                <option value="doctorado">Doctorado</option>
+            </select>
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        function setSelectValue(selectId, value) {
+        const select = document.getElementById(selectId);
+        for (const option of select.options) {
+          if (option.value === value) {
+            option.selected = true;
+            break;
+          }
+        }
+      }
+    </script>
+</body>
+</html>
